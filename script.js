@@ -3,17 +3,18 @@ const modes = document.getElementById('modes-select')
 const btn = document.getElementById('get-scheme-btn')
 
 
-function getColors(seed) {
-    fetch(`https://www.thecolorapi.com/scheme?hex=${seed.slice(1)}`)
+function getColors(seed, mode) {
+    fetch(`https://www.thecolorapi.com/scheme?hex=${seed.slice(1)}&mode=${mode}`)
     .then (res => res.json())
     .then (data => {
-        console.log(data)
+        console.log(data.colors)
     })
 }
 
 btn.addEventListener("click", (event) => {
     let seedColor = colorInput.value
-    getColors(seedColor)
+    let selectedMode = modes.value
+    getColors(seedColor, selectedMode)
    
 })
 
