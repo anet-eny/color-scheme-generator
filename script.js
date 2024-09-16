@@ -12,14 +12,19 @@ function getColors(seed, mode) {
 }
 
 function renderColors(colorsArr) {
-    let html = ""
+    let colorsHtml = ""
+    let hexHtml = ""
     for (let color of colorsArr) {
-        html += `
+        colorsHtml += `
         <div class="color" style=background-color:${color.hex.value}></div>
         `
+        hexHtml += `
+        <div class="hex"><p>${color.hex.value}</p></div>
+        `
     }
-    console.log(html)
-    document.getElementById('colors-container').innerHTML = html
+    document.getElementById('colors-container').innerHTML = colorsHtml
+    document.getElementById('hex-values').innerHTML = hexHtml
+    
     
 }
 
