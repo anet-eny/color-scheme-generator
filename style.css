@@ -30,6 +30,7 @@ body {
 #modes-select {
     width: 312px;
     font-family: Inter, sans-serif;
+    font-size: 16px;
     color: #111827;
 }
 #get-scheme-btn {
@@ -37,5 +38,5 @@ body {
     font-family: Inter, sans-serif;
     font-size: 12px;
     background-color: #FFFFFF;
-    color: #374151;
+    color: #374151; 
 }
